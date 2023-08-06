@@ -17,6 +17,7 @@ import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
+import ProductList from './page'
 
 const sortOptions = [
   { name: 'Most Popular', href: '#', current: true },
@@ -74,7 +75,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function ProductList() {
+export default function ProductFilters() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
   return (
@@ -305,7 +306,9 @@ export default function ProductList() {
               </form>
 
               {/* Product grid */}
-              <div className="lg:col-span-3">{/* Your content */}</div>
+              <div className="lg:col-span-3">{
+                <ProductList />
+              }</div>
             </div>
           </section>
         </main>

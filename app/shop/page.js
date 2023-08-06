@@ -1,13 +1,10 @@
 import React from 'react'
-import ShopNavigation from './shopNavigation'
-import ProductList from './productList'
+import ProductList from './productList/page'
 
 export default function Shop() {
   return (
     <>
-        <ShopNavigation>
-            <ProductList />
-        </ShopNavigation>
+      <ProductList />
     </>
   )
 }
